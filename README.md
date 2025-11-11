@@ -23,11 +23,4 @@ terraform destroy -auto-approve
 
 - Connect exec
 
-```sh
-aws ecs describe-services --cluster demo-ecs-postgres-cluster --service demo-ecs-postgres-db-service --region ca-central-1
-# "enableExecuteCommand": true
-
-# ??
-aws ecs execute-command --cluster demo-ecs-postgres-cluster --task 9edb6dfe7b114ed4b9131d44352a83da --container postgres --interactive --command '/bin/sh'
-
-```
+![pic](./doc/connect_exec.png)
