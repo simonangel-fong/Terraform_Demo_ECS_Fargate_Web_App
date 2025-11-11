@@ -9,8 +9,6 @@ terraform init -backend-config=backend.config
 terraform fmt && terraform validate
 
 terraform apply -auto-approve
-# Outputs:
-# cdn_domain = "d19tn7iec1lu1l.cloudfront.net"
 
 terraform destroy -auto-approve
 ```

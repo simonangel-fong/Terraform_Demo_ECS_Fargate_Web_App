@@ -1,0 +1,3 @@
+bucket  = ""
+key     = "demo-ecs-pgdb/terraform.tfstate"
+region  = ""
