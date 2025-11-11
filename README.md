@@ -17,6 +17,12 @@ terraform destroy -auto-approve
 
 ---
 
+## Connect with PGAdmin 4
+
+![pic](./doc/connect_pg.png)
+
+- Connect exec
+
 ```sh
 aws ecs describe-services --cluster demo-ecs-postgres-cluster --service demo-ecs-postgres-db-service --region ca-central-1
 # "enableExecuteCommand": true
