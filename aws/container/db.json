@@ -1,0 +1,39 @@
+[
+  {
+    "name": "postgres",
+    "image": "postgres:16",
+    "cpu": 1024,
+    "memory": 4096,
+    "networkMode": "awsvpc",
+    "portMappings": [
+      {
+        "containerPort": 5432,
+        "hostPort": 5432,
+        "protocol": "tcp"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-create-group": "true",
+        "awslogs-group": "/ecs/task/postgres",
+        "awslogs-region": "ca-central-1",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "environment": [
+      {
+        "name": "POSTGRES_USER",
+        "value": "postgres"
+      },
+      {
+        "name": "POSTGRES_DB",
+        "value": "postgres_db"
+      },
+      {
+        "name": "POSTGRES_PASSWORD",
+        "value": "postgres"
+      }
+    ]
+  }
+]
