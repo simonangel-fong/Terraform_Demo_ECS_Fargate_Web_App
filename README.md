@@ -41,8 +41,3 @@ SELECT * FROM demo;
 SELECT * FROM demo;
 -- 1	"hello"
 ```
-
----
-
-## Service Discovery
-
