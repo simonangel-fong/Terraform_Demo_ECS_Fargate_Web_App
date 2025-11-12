@@ -22,17 +22,15 @@
       }
     },
     "environment": [
+      { "name": "POSTGRES_USER", "value": "postgres" },
+      { "name": "POSTGRES_DB", "value": "postgres_db" },
+      { "name": "POSTGRES_PASSWORD", "value": "postgres" }
+    ],
+    "mountPoints": [
       {
-        "name": "POSTGRES_USER",
-        "value": "postgres"
-      },
-      {
-        "name": "POSTGRES_DB",
-        "value": "postgres_db"
-      },
-      {
-        "name": "POSTGRES_PASSWORD",
-        "value": "postgres"
+        "sourceVolume": "pgdata",
+        "containerPath": "/var/lib/postgresql/data",
+        "readOnly": false
       }
     ]
   }

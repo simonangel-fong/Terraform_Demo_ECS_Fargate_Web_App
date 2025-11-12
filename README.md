@@ -22,3 +22,27 @@ terraform destroy -auto-approve
 - Connect exec
 
 ![pic](./doc/connect_exec.png)
+
+---
+
+## Persist Database - EFS Volume
+
+```sql
+CREATE TABLE demo(id int primary key, note text);
+INSERT INTO demo VALUES (1,'hello');
+
+SELECT * FROM demo;
+-- 1	"hello"
+```
+
+- Stop and recreate task, connect db
+
+```sql
+SELECT * FROM demo;
+-- 1	"hello"
+```
+
+---
+
+## Service Discovery
+
